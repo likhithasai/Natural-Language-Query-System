@@ -88,7 +88,7 @@ def verb_stem(s):
     else:
         return s
 
-    if not ((s,"VBZ") in brown.tagged_words() and (verb,"VB") in brown.tagged_words()):
+    if not ((s,"VBZ") in set(brown.tagged_words()) and (verb,"VB") in set(brown.tagged_words())):
         verb = ""
     return verb
 
